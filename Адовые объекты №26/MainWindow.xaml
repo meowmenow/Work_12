@@ -1,0 +1,48 @@
+﻿<Window x:Class="Адовые_объекты__25.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Адовые_объекты__25"
+        mc:Ignorable="d"
+         Title="Янемогу" Height="500" Width="800" Initialized="Sozidat_Initialized" ResizeMode="NoResize" PreviewKeyDown="Letsgo_PreviewKeyDown" Icon="/wDsyBPmj95DrOzmIAZF6HiBoniZS7gDfq_gQqhT6whYo6l4JNWCkI1ajpMD_RCcJhaRqB2XGK1i_Eu_DFdUOTJkG.jpg" >
+    <Grid Background="Indigo">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="697*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="2" Margin="125,92,11,133" Source="/1614786158_93-p-smeshnie-foni-dlya-fotoshopa-118.jpg" Stretch="Fill"/>
+
+        <Menu BorderBrush="Aqua" Margin="0,0,0,418" Background="MediumPurple" Grid.ColumnSpan="3">
+            <MenuItem Header="Do it!" FontFamily="Comic Sans MS" FontWeight="Bold">
+                <MenuItem Header="Анек" Click="Anek_Click"/>
+                <MenuItem Header="About programm" Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        <Button Content="Stels" Margin="7,418,590,0" RenderTransformOrigin="1.183,2.155" Click="stels_Click" BorderBrush="MediumAquamarine" Background="{x:Null}" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="LightBlue" FontSize="10" Grid.Column="2"/>
+        <Button Foreground="LightBlue" Content="Вас заметили" Margin="10,356,690,66" Click="skyrim_Click" Background="{x:Null}" BorderBrush="MediumAquamarine" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="10" Grid.ColumnSpan="3"/>
+        <Button Foreground="LightBlue" x:Name="tp" Content="Перемещение" Margin="10,418,690,0" Click="teleport_Click" BorderBrush="MediumAquamarine" Background="{x:Null}" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="10" Grid.ColumnSpan="3"/>
+        <Button IsCancel="True" Content="Exit" Margin="647,0,0,418" Click="Exit_Click" Background="White" BorderBrush="MediumAquamarine" Foreground="Red" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.Column="2"/>
+        <Label  Foreground="LightBlue" Content="X-" Margin="10,146,30,236" RenderTransformOrigin="-0.2,1.541" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label  Foreground="LightBlue" Content="Y-" Margin="11,214,29,172" RenderTransformOrigin="1.629,-0.24" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <TextBox Foreground="LightBlue" BorderBrush="MediumAquamarine" x:Name="coord_X" Margin="58,146,603,275" Background="{x:Null}" TextChanged="coord_X_TextChanged" Grid.ColumnSpan="3"/>
+        <TextBox Foreground="LightBlue" BorderBrush="MediumAquamarine" x:Name="coord_Y" Margin="58,214,603,212" Background="{x:Null}" TextChanged="coord_Y_TextChanged" Grid.ColumnSpan="3"/>
+        <Label  Foreground="LightBlue" Content="Координаты:" Margin="0,92,603,338" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <Button Content="Точка" Margin="155,418,447,0" Click="Point_Click" Background="{x:Null}" Foreground="LightBlue" BorderBrush="MediumAquamarine" FontSize="10" FontFamily="Comic Sans MS" Grid.Column="2"/>
+        <Button Content="Многоугольник" Margin="255,418,348,0" Click="Mongol_Click" Background="{x:Null}" Foreground="LightBlue" BorderBrush="MediumAquamarine" FontSize="10" FontFamily="Comic Sans MS" Grid.Column="2"/>
+        <Button  Margin="354,418,249,0" Click="ColorMongol_Click" Background="{x:Null}" Foreground="LightBlue" BorderBrush="MediumAquamarine" FontFamily="Comic Sans MS" FontSize="10" Grid.Column="2">
+            <TextBlock TextAlignment="Center"><Run Text="Крашенный"/><LineBreak/><Run Text="многоугольник"/></TextBlock>
+        </Button>
+        <Button Content="Скрыть точку" Margin="588,356,0,66" Click="Hide_Point_Click" Background="{x:Null}" Foreground="LightBlue" BorderBrush="MediumAquamarine" FontFamily="Comic Sans MS" FontSize="10" Grid.Column="2"/>
+        <Button Margin="483,418,109,0" Click="Hide_Mongol_Click" Background="{x:Null}" Foreground="LightBlue" BorderBrush="MediumAquamarine" FontFamily="Comic Sans MS" FontSize="10" Grid.Column="2">
+            <TextBlock TextAlignment="Center"><Run Text="Скрыть"/><LineBreak/><Run Text="многоугольник"/></TextBlock>
+        </Button>
+        <Button Margin="588,418,0,0" Click="Hide_Color_Mongol_Click" Background="{x:Null}" Foreground="LightBlue" BorderBrush="MediumAquamarine" FontFamily="Comic Sans MS" FontSize="10" Grid.Column="2">
+            <TextBlock TextAlignment="Center"><Run Text="Скрыть крашенный"/><LineBreak/><Run Text="многоугольник"/></TextBlock>
+        </Button>
+
+        <Canvas x:Name="cvas" Margin="99,92,10,133" Grid.Column="2"/>
+
+    </Grid>
+</Window>
